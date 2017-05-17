@@ -25,8 +25,13 @@ for k in allfonts:
     try:
         font = ImageFont.truetype(k, 500, encoding="unic")
     except OSError:
+<<<<<<< HEAD
         print('ошибка с файлом %s' % k)
         pathlog = "/home/gantzer/work/ttx2png/"
+=======
+        print('системная ошибка с файлом %s' % k)
+        pathlog = "/home/gantzer/work/"
+>>>>>>> df5d5691512ee42d59c5e3e4b7a477993750e3d7
         os.chdir(pathlog)
         log = open('log.txt', 'a+')
         log.write('системная ошибка с файлом %s' % k + '\n')
@@ -40,4 +45,8 @@ for k in allfonts:
             im = Image.new('RGB', (text_width + 200, text_height + 200), "white")
             draw = ImageDraw.Draw(im)
             draw.text((100, 100), i, 'black', font=font)
+<<<<<<< HEAD
             im.save('%s.png' % i, 'PNG')
+=======
+            im.save('%s.png' % i, 'PNG')
+>>>>>>> df5d5691512ee42d59c5e3e4b7a477993750e3d7
